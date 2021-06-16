@@ -1,0 +1,26 @@
+
+.parallax{
+    transform: translateY(var(--parallax-offset)) !important;
+}
+
+.site-header{
+    height: 450px;
+
+    @include breakpoint($bp--tablet-portrait){
+        height: 650px;
+    }
+    @include breakpoint($bp--large-layout){
+        height: 750px;
+    }
+
+    .logo{
+        width: 160px;
+        @include breakpoint($bp--tablet-portrait){
+            width: 400px;
+        }
+        @include breakpoint($bp--large){
+            width: 550px;
+        }
+    }
+
+}

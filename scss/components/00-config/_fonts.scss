@@ -1,0 +1,15 @@
+
+// GOOGLE FONTS
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@0;1&family=Teko:wght@500;600&display=swap');
+
+// ICOMOON
+@font-face {
+    font-family: 'icomoon';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: url('https://d1azc1qln24ryf.cloudfront.net/42560/Ethic/icomoon.woff2?6tr204') format('woff2'), url('https://d1azc1qln24ryf.cloudfront.net/42560/Ethic/icomoon.woff?6tr204') format('woff');
+}
+
+$font--regular: 'Barlow Condensed', sans-serif;
+$font--heading: 'Teko', sans-serif;

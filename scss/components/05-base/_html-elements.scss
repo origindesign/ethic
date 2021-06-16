@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+
+    &:focus{
+        outline:$outline;
+    }
+    &:focus:not(:focus-visible) {
+        outline: none;
+    }
+
+}
+
+html {
+    font-size:62.5%; background: #fff;
+}
+
+body {
+    @include body-copy();
+    color:$color--text;
+}
+
+h1, h2{
+    @include marginResets();
+}
+h1 { @include h1(); }
+h2, .h2 { @include h2(); }
+h3, .h3 { @include h3(); }
+
+p{
+    @include marginResets();
+    margin:$base-typography-spacing 0;
+}
+
+a {
+    @include transitions();
+    text-decoration:none; color: $color--text;
+
+    @include hover(){
+        color:$color--text;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display:block;
+}
+
+sup{
+    font-size: 25%; top: -2.5em;
+}

@@ -1,0 +1,25 @@
+@mixin button() {
+    @include transitions();
+    @include fontsize(19);
+    color: #fff;
+    background: $color--primary;
+    border: 0;
+    padding: 0.5em 1.5em;
+    outline-color: $color--primary;
+    outline-offset:$outline-offset;
+    font-weight: 600;
+
+    @include hover() {
+        background: shade($color--primary, 50%);
+        cursor: pointer;
+    }
+
+    @include breakpoint($bp--typography){
+        @include fontsize(30);
+    }
+
+}
+
+.button{
+    @include button();
+}

@@ -1,0 +1,24 @@
+
+// Global setups
+// ----------------------
+
+.container{
+    @include container();
+}
+
+.row{
+    @include rowMargin();
+
+    &-padding{
+        @include rowPadding();
+    }
+
+}
+
+
+// Grid
+// ----------------------
+
+.grid-area-main{
+    grid-area:main;
+}

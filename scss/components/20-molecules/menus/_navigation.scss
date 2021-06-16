@@ -1,0 +1,22 @@
+
+.social{
+
+    li{
+        &:not(:last-child){
+            margin-right: 1em;
+        }
+    }
+    a{
+        @include fonticon('', 25px, $color--primary, 50%, 50%, auto, auto, true, true);
+        width: 25px; height: 25px; display: block; outline-offset: $outline-offset;
+
+        &[href*="instagram"]:before{
+            content: '\e901';
+        }
+        &[href*="facebook"]:before{
+            content: '\e900';
+        }
+
+    }
+
+}
