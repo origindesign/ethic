@@ -70,39 +70,73 @@
     column-gap: $column-gap;
     grid-template-rows:auto;
     grid-template-columns: repeat(12, minmax(0, 1fr));
+    @include breakpoint($bp--phone){
+        column-gap: 0;
+    }
 }
 
 @mixin content-container(){
-    grid-column:1/span 12;
-    @include breakpoint($bp--tablet-portrait){
-        grid-column:2/span 10;
-    }
+    grid-column:2/span 10;
     @include breakpoint($bp--large-layout){
         grid-column:3/span 8;
     }
-    @include breakpoint($bp--large){
+    @include breakpoint($bp--xlarge){
         grid-column: 4/span 6;
     }
 }
 
-@mixin rowMargin($small: false, $force: false){
-    margin-top:$row-margin-small; margin-bottom:$row-margin-small;
-    @if not $small{
-        @include breakpoint($bp--tablet-landscape){
-            margin-top:$row-margin; margin-bottom:$row-margin;
-        }
+@mixin content-container-offset-right(){
+    grid-column: 3/span 10;
+    @include breakpoint($bp--small){
+        grid-column: 4/span 9;
     }
-    @if not $force{
-        @include marginResets();
+    @include breakpoint($bp--tablet-portrait){
+        grid-column: 3/span 9;
+    }
+    @include breakpoint($bp--large-layout){
+        grid-column: 2/span 10;
+    }
+    @include breakpoint($bp--large){
+        grid-column: 3/span 8;
     }
 }
 
-@mixin rowPadding($small: false){
+@mixin rowMargin(){
+    margin-top:$row-margin-small; margin-bottom:$row-margin-small;
+    @include breakpoint($bp--tablet-portrait){
+        margin-top:$row-margin-medium; margin-bottom:$row-margin-medium;
+    }
+    @include breakpoint($bp--large){
+        margin-top:$row-margin; margin-bottom:$row-margin;
+    }
+    @include marginResets();
+}
+
+@mixin rowPadding(){
     padding-top:$row-margin-small; padding-bottom:$row-margin-small;
-    @if not $small{
-        @include breakpoint($bp--tablet-landscape){
-            padding-top:$row-margin; padding-bottom:$row-margin;
-        }
+    @include breakpoint($bp--tablet-portrait){
+        padding-top:$row-margin-medium; padding-bottom:$row-margin-medium;
+    }
+    @include breakpoint($bp--large){
+        padding-top:$row-margin; padding-bottom:$row-margin;
+    }
+}
+@mixin rowPaddingTop(){
+    padding-top:$row-margin-small;
+    @include breakpoint($bp--tablet-portrait){
+        padding-top:$row-margin-medium;
+    }
+    @include breakpoint($bp--large){
+        padding-top:$row-margin;
+    }
+}
+@mixin rowPaddingBottom(){
+    padding-bottom:$row-margin-small;
+    @include breakpoint($bp--tablet-portrait){
+        padding-bottom:$row-margin-medium;
+    }
+    @include breakpoint($bp--large){
+        padding-bottom:$row-margin;
     }
 }
 

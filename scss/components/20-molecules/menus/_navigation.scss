@@ -6,15 +6,21 @@
             margin-right: 1em;
         }
     }
+
+    $size: 35px;
+
     a{
-        @include fonticon('', 25px, $color--primary, 50%, 50%, auto, auto, true, true);
-        width: 25px; height: 25px; display: block; outline-offset: $outline-offset;
+        @include fonticon('', $size, #fff, 50%, 50%, auto, auto, true, true);
+        width: $size; height: $size; display: block; outline-offset: $outline-offset; color: #fff;
 
         &[href*="instagram"]:before{
-            content: '\e901';
+            content: $icon-instagram;
         }
         &[href*="facebook"]:before{
-            content: '\e900';
+            content: $icon-facebook;
+        }
+        &[href*="mailto:"]:before{
+            content: $icon-email;
         }
 
     }

@@ -5,12 +5,57 @@
 .container{
     @include container();
 }
+.inner-grid{
+    @include inner-grid();
+}
+.content-container{
+    @include content-container();
+    &-offset-right{
+        @include content-container-offset-right();
+    }
+}
+
+.row-gap-base{
+    row-gap:$row-margin-small;
+    @include breakpoint($bp--tablet-portrait){
+        row-gap:$row-margin-medium;
+    }
+    @include breakpoint($bp--large){
+        row-gap:$row-margin;
+    }
+}
+.grid-offset{
+    &-left{
+        margin-left: -$small-screen-padding;
+        @include breakpoint($bp--tablet-portrait){
+            margin-left: -$medium-screen-padding;
+        }
+        @include breakpoint($bp--xlarge){
+            margin-left: -$large-screen-padding;
+        }
+    }
+    &-right{
+        margin-right: -$small-screen-padding;
+        @include breakpoint($bp--tablet-portrait){
+            margin-right: -$medium-screen-padding;
+        }
+        @include breakpoint($bp--xlarge){
+            margin-right: -$large-screen-padding;
+        }
+    }
+}
 
 .row{
     @include rowMargin();
 
     &-padding{
         @include rowPadding();
+        &-top{
+            @include rowPaddingTop();
+        }
+        &-bottom{
+            @include rowPaddingBottom();
+        }
     }
 
 }
@@ -19,6 +64,12 @@
 // Grid
 // ----------------------
 
+.grid-main-full{
+    grid-column: 1/span 3;
+}
+.grid-column-main{
+    grid-column: 2/span 1;
+}
 .grid-area-main{
     grid-area:main;
 }

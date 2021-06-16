@@ -1,25 +1,46 @@
+
+@mixin button-text(){
+    @include heading(20);
+    line-height: 1;
+    @include breakpoint($bp--typography){
+        @include fontsize(26);
+    }
+}
+
 @mixin button() {
     @include transitions();
-    @include fontsize(19);
+    @include button-text();
     color: #fff;
     background: $color--primary;
     border: 0;
     padding: 0.5em 1.5em;
     outline-color: $color--primary;
     outline-offset:$outline-offset;
-    font-weight: 600;
 
     @include hover() {
         background: shade($color--primary, 50%);
         cursor: pointer;
     }
 
-    @include breakpoint($bp--typography){
-        @include fontsize(30);
+}
+
+@mixin link-arrow(){
+    @include button-text();
+    @include fonticon($icon-arrow, 30px, inherit, 50%, auto, 0, auto, false, true);
+    padding-right: 1em; color: $color--primary; outline-color: $color--primary;
+
+    @include hover(){
+        color: shade($color--primary, 50%);
+        &:before{
+            right: -0.3em;
+        }
     }
 
 }
 
 .button{
     @include button();
+}
+.link-arrow{
+    @include link-arrow();
 }

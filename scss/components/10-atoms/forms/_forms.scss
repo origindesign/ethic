@@ -1,5 +1,5 @@
-$margin-form-item: $base-typography-spacing*2.5;
-$form-field-height: 3em;
+$margin-form-item: 1.5em;
+$form-field-height: 50px;
 $checkbox-height: 22px;
 
 @mixin label() {
@@ -8,22 +8,43 @@ $checkbox-height: 22px;
 
 @mixin field() {
     @include fontsize();
-    background: $color--background; width:100%; padding:0 1em; line-height:$form-field-height; height:$form-field-height; color: $color--text; border: none; outline-color: #fff; outline-offset: $outline-offset;
+    background: $color--background-light; width:100%; padding:0 0.5em; line-height:$form-field-height; height:$form-field-height; color: $color--text; border: none; outline-color: $color--text; outline-offset: $outline-offset;
 }
 
 @mixin required() {
     &:after {
         content: " *";
-        color: $color--primary;
+        color: #ff0000;
     }
 }
 
 form {
+    @include breakpoint($bp--phone){
+        display: block !important;
+    }
+    @include breakpoint($bp--large){
+        margin: 0 -#{$column-gap/2}; flex-wrap: nowrap !important;
+    }
 
     .form-item {
-        @include clearfix();
-        margin: $margin-form-item 0; position:relative;
+        margin: $margin-form-item 0;
         @include marginResets();
+        @include breakpoint($bp--tablet-portrait){
+            margin: 0; align-self: flex-end; flex-basis: calc(50% - #{$column-gap/2});
+            &:nth-child(3),
+            &:nth-child(4){
+                margin-top: $margin-form-item;
+            }
+            &.type-email{
+                flex-basis: auto; padding-right: $column-gap; flex-grow: 2;
+            }
+            &.form-actions{
+                flex-basis: auto; flex-grow: 0;
+            }
+        }
+        @include breakpoint($bp--large){
+            flex-basis: auto; padding: 0 $column-gap/2 !important; margin: 0 !important; flex-grow: 1;
+        }
     }
 
     input, button{
@@ -32,29 +53,22 @@ form {
 
     input[type="text"], input[type="email"]{
         @include field();
-        @include maxWidth(440px);
     }
 
     label{
         @include label();
-    }
-
-    button[type="submit"], input[type="submit"] {
-        margin-top: 2em; outline-offset:$outline-offset;
-        &:focus{
-            outline:#{$outline} $color--primary;
+        &.required{
+            @include required();
         }
     }
 
-}
-
-
-button[type="submit"], input[type="submit"]{
-    @include button();
-    -webkit-appearance:none !important; -webkit-border-radius:2px !important;
-
-    &:focus{
-        outline:2px dotted $color--primary;
+    button[type="submit"], input[type="submit"] {
+        @include button();
+        @include padding(0, top);
+        outline-offset:$outline-offset; height: $form-field-height; line-height: $form-field-height;
+        &:focus{
+            outline:#{$outline} $color--primary;
+        }
     }
 
 }

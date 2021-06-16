@@ -1,5 +1,6 @@
 
 $base-image-padding: 56.25%;
+$portrait-image-padding: 125%;
 
 @mixin object-fit($fit: cover, $position: 50% 50%) {
     -o-object-fit: $fit;
@@ -41,11 +42,38 @@ $base-image-padding: 56.25%;
     }
 }
 
+@mixin pattern($direction){
+    $size-small: 30px;
+    $size-medium: 54px;
+    $size-large: 72px;
+    &:before{
+        z-index: 50;
+        @if $direction == horizontal{
+            height: $size-small; width: 40%; background-image: url('../images/pattern-horizontal.svg');
+            @include breakpoint($bp--tablet-portrait){
+                height: $size-medium;
+            }
+            @include breakpoint($bp--large){
+                height: $size-large;
+            }
+        }
+        @if $direction == vertical{
+            width: $size-small; background-image: url('../images/pattern-vertical.svg');
+            @include breakpoint($bp--tablet-portrait){
+                width: $size-medium;
+            }
+            @include breakpoint($bp--large){
+                width: $size-large;
+            }
+        }
+    }
+}
+
 .media{
     @include objectFitImage();
 
     img{
-        @include transitions();
+        @include transitionPageElement();
         position:absolute;
         &.lazyload{
             opacity: 0;
@@ -62,6 +90,9 @@ $base-image-padding: 56.25%;
 
     &.cover{
         padding: 0;
+    }
+    &.portrait{
+        padding-bottom: $portrait-image-padding;
     }
 
 }

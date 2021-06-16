@@ -11,11 +11,15 @@ if ( $_SERVER[ 'REQUEST_METHOD' ] !== 'POST' ) {
 }
 else {
 
-  $api_key = 'HClon45BCQ2o89YXGqizwvHvxci6FrF1AjZJIG3NdoLV3yxk2Izi4RIJI2IGIZx7bfNJUnLZsAQIjH/eKtpE5f4SAwbhfbtjUNWMpTOsmn38+n0OUGhbHRev7Q3onMsGtAMRwA8u56byeji+jTYWzg==';
-  $list_id = '458bfea33dc51790ef3690a75b830656';
+  $api_key = 'Hs1FGq/rKRkd+5STHSwAtZgvDE+KX0Dfj4iNiiFzcg0rylKF0m6clTQ+xQ+gVk2QGAy5dZUAP87pByqVI9Id8iKqnjFV22lwXVYq0Ing/U3ao6jaIQV/Ipz9GgMT0jCImxk3xHjSQJm1dLVEUFzbXg==';
+  $list_id = '5879be54a3bfe81805da905b34e7e4be';
 
   $email = array_key_exists( 'email', $_POST ) ? $_POST[ 'email' ] : '';
   $email = cleanInput( $email );
+  $firstname = array_key_exists( 'firstname', $_POST ) ? $_POST[ 'firstname' ] : '';
+  $firstname = cleanInput( $firstname );
+  $lastname = array_key_exists( 'lastname', $_POST ) ? $_POST[ 'lastname' ] : '';
+  $lastname = cleanInput( $lastname );
 
   if ( filter_var( $email, FILTER_VALIDATE_EMAIL ) ) {
     try {
@@ -24,16 +28,30 @@ else {
       );
       $wrap = new CS_REST_Subscribers( $list_id, $auth );
 
-      $result = $wrap->add( array(
-        'EmailAddress' => $email,
-        'ConsentToTrack' => 'yes',
-        'Resubscribe' => true
-      ) );
+      $result = $wrap->add(
+        array(
+          'EmailAddress' => $email,
+          'CustomFields' => array(
+            array(
+              'Key' => 'FirstName1',
+              'Value' => $firstname
+            ),
+            array(
+              'Key' => 'LastName1',
+              'Value' => $lastname
+            )
+          ),
+          'ConsentToTrack' => 'yes',
+          'Resubscribe' => true
+        )
+      );
 
       if ( $result->was_successful() )
-        renderResponse( false, $success_message );
+        // $success_message
+        // $result
+        renderResponse( false, $firstname );
       else
-        renderResponse( true, $error_message_general );
+        renderResponse( true, $result );
     }
     catch ( Exception $e ) {
       renderResponse( true, $error_message_general );

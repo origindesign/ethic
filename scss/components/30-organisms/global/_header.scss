@@ -9,10 +9,13 @@
     @include breakpoint($bp--tablet-portrait){
         height: 650px;
     }
-    @include breakpoint($bp--large-layout){
-        height: 750px;
+    @include breakpoint($bp--large){
+        height: 90vh;
     }
 
+    .copy{
+        padding-top: 5em;
+    }
     .logo{
         width: 160px;
         @include breakpoint($bp--tablet-portrait){
@@ -20,6 +23,16 @@
         }
         @include breakpoint($bp--large){
             width: 550px;
+        }
+    }
+
+    h1{
+        margin: 0.3em 0;
+    }
+    h4{
+        @include maxWidth(30ch);
+        @include breakpoint($bp--large-layout){
+            max-width: none;
         }
     }
 

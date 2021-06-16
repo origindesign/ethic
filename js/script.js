@@ -4,8 +4,7 @@ $(function() {
     /**
      * InView Animations
      */
-    $('.fade-in, '
-        + '.fade-in-up')
+    $('.fade-in')
         .one('inview', function (event, isInView) {
             let $this = $(this);
             if (isInView) {
@@ -33,9 +32,9 @@ $(function() {
             $('.error').remove();
 
             if(!response.error){
-                $form.replaceWith('<p class="t-c-primary success"><strong>' + response.message + '</strong></p>');
+                $form.replaceWith('<p class="success"><strong>' + response.message + '</strong></p>');
             } else {
-                $form.before('<p class="t-c-primary error"><strong>' + response.message + '</strong></p>');
+                $form.before('<p class="error"><strong>' + response.message + '</strong></p>');
             }
 
             console.log(response);

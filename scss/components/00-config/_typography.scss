@@ -1,7 +1,7 @@
 $mobile-font-size: 14;
 $base-font-size: 18;
 $base-typography-spacing: 1.5em;
-$base-line-height: 1.3;
+$base-line-height: 1.6;
 
 @mixin fontsize($fontsize: $base-font-size){
     font-size: #{$fontsize}px;
@@ -18,29 +18,47 @@ $base-line-height: 1.3;
 
 @mixin heading($fontsize: $base-font-size){
     @include fontsize($fontsize);
-    font-weight: 500; text-transform: uppercase;
+    font-weight: 500; text-transform: uppercase; font-family: $font--heading;
+}
+
+@mixin text-shadow(){
+    text-shadow: 0 0 10px rgba(0,0,0,0.25);
 }
 
 @mixin h1() {
-    @include heading(50);
-    line-height:1; margin:0;
+    @include heading(62);
+    line-height:0.75; margin:0;
+    @include breakpoint($bp--typography){
+        @include fontsize(160);
+    }
 }
 
 @mixin h2() {
     @include heading(40);
-    line-height:1; margin:0;
+    line-height:0.8; margin:0;
     @include breakpoint($bp--typography){
-        @include fontsize(64);
+        @include fontsize(80);
     }
     @include breakpoint($bp--large){
-        @include fontsize(80);
+        @include fontsize(96);
     }
 }
 
 @mixin h3() {
+    @include fontsize(24);
+    line-height:1; margin:0 0 $base-typography-spacing 0; font-weight: normal;
+    @include breakpoint($bp--typography){
+        @include fontsize(34);
+    }
+}
+
+@mixin h4() {
     @include heading(20);
     line-height:1; margin:0;
     @include breakpoint($bp--typography){
+        @include fontsize(24);
+    }
+    @include breakpoint($bp--large){
         @include fontsize(30);
     }
 }
@@ -48,10 +66,22 @@ $base-line-height: 1.3;
 @mixin large-text(){
     @include fontsize(17);
     @include breakpoint($bp--typography){
-        @include fontsize(22);
-    }
-    @include breakpoint($bp--large){
         @include fontsize(24);
+    }
+}
+
+@mixin larger-text(){
+    @include fontsize(24);
+    @include breakpoint($bp--large){
+        @include fontsize(34);
+    }
+}
+
+@mixin largest-text(){
+    @include fontsize(28);
+    line-height: 1.3;
+    @include breakpoint($bp--typography){
+        @include fontsize(50);
     }
 }
 

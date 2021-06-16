@@ -1,0 +1,118 @@
+
+.paragraph{
+
+    &--image-aside-copy{
+
+        @include breakpoint($bp--large-layout){
+            @include padding(0, top);
+        }
+
+        > .copy{
+            grid-column: 3/span 10;
+            @include breakpoint($bp--condensed-layout){
+                @include padding(0, top);
+            }
+            @include breakpoint($bp--small){
+                grid-column: 4/span 9;
+            }
+            @include breakpoint($bp--tablet-portrait){
+                grid-column: 3/span 9;
+            }
+            @include breakpoint($bp--large-layout){
+                @include padding($row-margin-medium*1.5, top);
+                grid-column: 7/span 6;
+            }
+            @include breakpoint($bp--large){
+                @include padding($row-margin*1.5, top);
+                grid-column: 8/span 4;
+            }
+        }
+        > .image{
+            grid-column: 1/span 12;
+
+            @include breakpoint($bp--large-layout){
+                grid-column: 1/span 5; grid-row: 1;
+            }
+            @include breakpoint($bp--large){
+                grid-column: 1/span 6;
+            }
+
+            &:before{
+                background: $color--background-dark; width: 92%;
+            }
+            .cover{
+                @include breakpoint($bp--condensed-layout){
+                    position: static !important; height: auto !important;
+                }
+            }
+            .media{
+                @include breakpoint($bp--large-layout){
+                    @include cover();
+                    padding: 0;
+                }
+            }
+
+        }
+
+        &.align--right{
+
+            > .copy{
+                grid-column: 2/span 10;
+                @include breakpoint($bp--small){
+                    grid-column: 2/span 8;
+                }
+                @include breakpoint($bp--tablet-portrait){
+                    grid-column: 2/span 9;
+                }
+                @include breakpoint($bp--condensed-layout){
+                    grid-row: 2;
+                }
+                @include breakpoint($bp--large-layout){
+                    grid-column: 1/span 6;
+                }
+                @include breakpoint($bp--large){
+                    grid-column: 2/span 4;
+                }
+            }
+            > .image{
+                @include breakpoint($bp--condensed-layout){
+                    grid-row: 1;
+                }
+                @include breakpoint($bp--large-layout){
+                    grid-column: 8/span 5; grid-row: 1;
+                }
+                @include breakpoint($bp--large){
+                    grid-column: 7/span 6;
+                }
+                &:before{
+                    left: auto; right: 0;
+                }
+            }
+
+        }
+
+    }
+
+    &--copy-over-image{
+        .copy{
+            grid-column: 2/span 11;
+        }
+    }
+
+    &--logo-text{
+
+        @include breakpoint($bp--phone){
+            display: block;
+        }
+
+        .image{
+            width: 95px; flex-shrink: 0; margin-right: $column-gap;
+            @include breakpoint($bp--tablet-portrait){
+                width: 120px;
+            }
+
+        }
+
+    }
+
+}
