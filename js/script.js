@@ -25,7 +25,9 @@ $(function() {
             type: 'POST',
             dataType: 'json',
             data: {
-                email: $form.find('#email').val()
+                email: $form.find('#email').val(),
+                firstname: $form.find('#firstname').val(),
+                lastname: $form.find('#lastname').val()
             }
         }).always(function (response) {
 

@@ -2,7 +2,7 @@
 
 require_once 'vendor/campaignmonitor/createsend-php/csrest_subscribers.php';
 
-$success_message = 'You\'ve been signed up to our email list.';
+$success_message = 'Thank you, you\'ve been signed up to our email list.';
 $error_message_general = 'There was a problem signing you up, please try again.';
 $error_message_format = 'Please enter a valid email address.';
 
@@ -47,11 +47,9 @@ else {
       );
 
       if ( $result->was_successful() )
-        // $success_message
-        // $result
-        renderResponse( false, $firstname );
+        renderResponse( false, $success_message );
       else
-        renderResponse( true, $result );
+        renderResponse( true, $error_message_general );
     }
     catch ( Exception $e ) {
       renderResponse( true, $error_message_general );
