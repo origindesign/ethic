@@ -1,22 +1,41 @@
+
+<?php
+    $image_sizes = ['3000', '2000', '1200', '800'];
+
+    function srcset($filename, $extension = '.jpg'){
+        $output = '';
+        global $image_sizes;
+        foreach($image_sizes as $key => $size){
+            $output .= '/images/'.$filename.'-'.$size.$extension.' '.$size.'w';
+            if($key !== count($image_sizes)-1){
+                $output .= ',';
+            }
+        }
+        print $output;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>We Are ETHIC</title>
 
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
     <link rel="stylesheet" media="all" href="/dist/style.css?v=1.6" />
 
     <meta name="MobileOptimized" content="width" />
     <meta name="HandheldFriendly" content="true" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta name="description" content="" />
-    <meta property="og:site_name" content="" />
+    <meta name="description" content="Furthering Equity in Trails, Health, Infrastructure, and Community" />
+    <meta property="og:site_name" content="ETHIC" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="" />
-    <meta property="og:title" content="" />
-    <meta property="og:description" content="" />
+    <meta property="og:url" content="https://weareethic.org" />
+    <meta property="og:title" content="We Are ETHIC" />
+    <meta property="og:description" content="Furthering Equity in Trails, Health, Infrastructure, and Community " />
     <meta property="og:image" content="" />
 
     <meta name="format-detection" content="telephone=no">
@@ -38,8 +57,19 @@
 
         <header class="pos-relative t-align-center site-header pseudo-before pattern-horizontal right bottom">
             <div class="overflow-hidden cover">
-                <div class="media cover parallax">
-                    <img class="lazyload" width="3200" height="2136" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/hero.jpg" alt="" />
+                <div class="parallax cover carousel">
+                    <div class="media cover">
+                        <img data-parent-fit="cover" class="lazyload" width="3000" height="2000" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="<?php srcset('1'); ?>" alt="" />
+                    </div>
+                    <div class="media cover">
+                        <img data-parent-fit="cover" class="lazyload" width="3000" height="2000" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="<?php srcset('2'); ?>" alt="" />
+                    </div>
+                    <div class="media cover">
+                        <img data-parent-fit="cover" class="lazyload" width="3000" height="2000" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="<?php srcset('3'); ?>" alt="" />
+                    </div>
+                    <div class="media cover">
+                        <img data-parent-fit="cover" class="lazyload" width="3000" height="2000" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="<?php srcset('5'); ?>" alt="" />
+                    </div>
                 </div>
             </div>
             <div class="d-flex direction-column jc-flex-start ai-center cover t-c-white fade-in t-shadow copy">
@@ -234,7 +264,7 @@
     </div>
 
 
-    <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.6.0/dist/jquery.min.js,npm/jquery-inview@1.1.2/jquery.inview.min.js,npm/lazysizes@5.3.2/lazysizes.min.js,npm/lazysizes@5.3.2/plugins/object-fit/ls.object-fit.min.js,npm/lazysizes@5.3.2/plugins/aspectratio/ls.aspectratio.min.js,npm/lazysizes@5.3.2/plugins/parent-fit/ls.parent-fit.js"></script>
+    <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.6.0/dist/jquery.min.js,npm/slick-carousel@1.8.1,npm/jquery-inview@1.1.2/jquery.inview.min.js,npm/lazysizes@5.3.2/lazysizes.min.js,npm/lazysizes@5.3.2/plugins/respimg/ls.respimg.min.js,npm/lazysizes@5.3.2/plugins/object-fit/ls.object-fit.min.js,npm/lazysizes@5.3.2/plugins/parent-fit/ls.parent-fit.js"></script>
     <script src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
     <script src="dist/all.min.js?v=1.6"></script>
 

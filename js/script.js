@@ -2,6 +2,19 @@
 $(function() {
 
     /**
+     * Carousel
+     */
+    $('.carousel').slick({
+        autoplay: true,
+        autoplaySpeed: 5000,
+        dots: false,
+        arrows: false,
+        infinite: true,
+        fade: true,
+        pauseOnHover: false
+    });
+
+    /**
      * InView Animations
      */
     $('.fade-in')
