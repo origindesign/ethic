@@ -3,6 +3,13 @@
     transform: translateY(var(--parallax-offset)) !important;
 }
 
+.carousel{
+    &:after{
+        @include pseudo();
+        background: rgba($color--black, 0.3);
+    }
+}
+
 .site-header{
     height: 450px;
 
