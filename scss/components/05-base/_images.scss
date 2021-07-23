@@ -88,6 +88,13 @@ $portrait-image-padding: 125%;
 
     }
 
+    &.focus-middle-left{
+        img{ @include object-position(0 50%); }
+    }
+    &.focus-middle-right{
+        img{ @include object-position(100% 50%); }
+    }
+
     &.cover{
         padding: 0;
     }

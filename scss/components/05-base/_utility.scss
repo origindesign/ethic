@@ -48,6 +48,13 @@
         }
     }
 }
+.hide{
+    &-phone{
+        @include breakpoint($bp--phone){
+            display: none !important;
+        }
+    }
+}
 
 
 // Flex / Grid

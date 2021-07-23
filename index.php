@@ -2,9 +2,11 @@
 <?php
     $image_sizes = ['3000', '2000', '1200', '800'];
 
-    function srcset($filename, $extension = '.jpg'){
+    function srcset($filename, $image_sizes = null, $extension = '.jpg'){
         $output = '';
-        global $image_sizes;
+        if(!isset($image_sizes)){
+          global $image_sizes;
+        }
         foreach($image_sizes as $key => $size){
             $output .= '/images/'.$filename.'-'.$size.$extension.' '.$size.'w';
             if($key !== count($image_sizes)-1){
@@ -24,7 +26,7 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
-    <link rel="stylesheet" media="all" href="/dist/style.css?v=1.6" />
+    <link rel="stylesheet" media="all" href="/dist/style.css?v=1.7" />
 
     <meta name="MobileOptimized" content="width" />
     <meta name="HandheldFriendly" content="true" />
@@ -59,16 +61,13 @@
             <div class="overflow-hidden cover">
                 <div class="parallax cover carousel">
                     <div class="media cover">
-                        <img data-parent-fit="cover" class="lazyload" width="3000" height="2000" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="<?php srcset('1'); ?>" alt="" />
+                        <img data-parent-fit="cover" data-sizes="auto" class="lazyload" width="3000" height="2000" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="<?php srcset('1'); ?>" alt="Two people rolling around a berm on a trail" />
                     </div>
                     <div class="media cover">
-                        <img data-parent-fit="cover" class="lazyload" width="3000" height="2000" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="<?php srcset('2'); ?>" alt="" />
+                        <img data-parent-fit="cover" data-sizes="auto" class="lazyload" width="3000" height="2000" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="<?php srcset('2'); ?>" alt="Groupd of people riding bikes on a street" />
                     </div>
-                    <div class="media cover">
-                        <img data-parent-fit="cover" class="lazyload" width="3000" height="2000" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="<?php srcset('3'); ?>" alt="" />
-                    </div>
-                    <div class="media cover">
-                        <img data-parent-fit="cover" class="lazyload" width="3000" height="2000" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="<?php srcset('5'); ?>" alt="" />
+                    <div class="media cover focus-middle-right">
+                        <img data-parent-fit="cover" data-sizes="auto" class="lazyload" width="3000" height="2000" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="<?php srcset('5'); ?>" alt="Man hiking on a forest trail" />
                     </div>
                 </div>
             </div>
@@ -76,14 +75,14 @@
 
                 <strong>
                     <em class="t-large">
-                        Bike NWA &amp; NWA Trailblazers are now
+                        BikeNWA &amp; NWA Trailblazers are now
                     </em>
                 </strong>
                 <h1>
                     <img src="/images/logo.svg" alt="Ethic" class="logo" />
                 </h1>
                 <h4>
-                    Furthering Equity in Trails, Health, Infrastructure, and Community
+                    Equity  <span> // </span>  Trails  <span> // </span>  Health  <span class="hide-phone"> // </span>  Infrastructure  <span> // </span>  Community
                 </h4>
 
             </div>
@@ -99,7 +98,7 @@
                         Expanded Vision.
                     </h2>
                     <p class="t-large">
-                        The merging of Bike NWA and NWATrailblazers into <strong>ETHIC</strong> establishes a single organization that upholds the goal of creating a world-class recreational and active transportation infrastructure network, while strengthening our focus on diversity, equity, and inclusion. Through programming and events that increase the diversity of our trails and of those accessing them, ETHIC empowers people to live active, healthy lives in their own community.
+                        The merging of BikeNWA and NWA Trailblazers into <strong>ETHIC</strong> establishes a single organization that upholds the goal of creating a world-class recreational and active transportation infrastructure network, while strengthening our focus on diversity, equity, and inclusion. Through programming and events that increase the diversity of our trails and of those accessing them, ETHIC empowers people to live active, healthy lives in their own community.
                     </p>
                     <p class="t-larger">
                         Together, we can strengthen the foundations of <strong>Equity in Trails, Health, Infrastructure, and Community</strong> to improve the health and well being of our community.
@@ -107,8 +106,8 @@
                 </div>
                 <div class="row-padding grid-offset-left pseudo-before image">
                     <div class="cover pos-relative">
-                        <div class="media portrait">
-                            <img class="lazyload" width="3200" height="2136" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/hero.jpg" alt="" />
+                        <div class="media portrait focus-middle-left">
+                            <img data-parent-fit="cover" data-sizes="auto" class="lazyload" width="3000" height="2000" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="<?php srcset('first'); ?>" alt="Two men gravel biking" data-aspectratio="1.5" />
                         </div>
                     </div>
                 </div>
@@ -129,21 +128,21 @@
                     <div class="p-b-2 border-bottom">
                         <p class="t-large">
                             <strong>
-                                Our new site is coming soon. In the meantime, please visit Bike NWA and NWA Trailblazers to learn more.
+                                Our new site is coming soon. In the meantime, please visit BikeNWA and NWA Trailblazers to learn more.
                             </strong>
                         </p>
                     </div>
                     <div class="p-v-2 paragraph--logo-text border-bottom d-flex">
                         <div class="m-b-base image">
-                            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/logo-bike-nwa.svg" alt="Logo: Bike NWA" />
+                            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/logo-bike-nwa.svg" alt="Logo: BikeNWA" />
                         </div>
                         <div class="copy">
                             <p>
-                                Learn more about Bike NWA’s vision for a safe, easy, and convenient multi-modal network that connects where people live, work, and play, along with their initiatives to promote advocacy and education in cities across Northwest Arkansas.
+                                Learn more about BikeNWA’s vision for a safe, easy, and convenient multi-modal network that connects where people live, work, and play, along with their initiatives to promote advocacy and education in cities across Northwest Arkansas.
                             </p>
                             <p>
                                 <a class="link-arrow" target="_blank" href="https://www.bikenwa.org/">
-                                    Visit Site <span class="visually-hidden">: Bike NWA</span>
+                                    Visit Site <span class="visually-hidden">: BikeNWA</span>
                                 </a>
                             </p>
                         </div>
@@ -167,7 +166,7 @@
                 <div class="row-padding grid-offset-right pseudo-before image">
                     <div class="cover pos-relative">
                         <div class="media portrait">
-                            <img class="lazyload" width="3200" height="2136" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/hero.jpg" alt="" />
+                            <img data-parent-fit="cover" data-sizes="auto" class="lazyload" width="3000" height="2000" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="<?php srcset('second'); ?>" alt="Small child on a bike chasing bubbles" />
                         </div>
                     </div>
                 </div>
@@ -175,7 +174,7 @@
 
             <div class="container grid-main-full pos-relative pseudo-before pattern-horizontal left top">
                 <div class="media cover">
-                    <img class="lazyload" width="3200" height="2136" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/hero.jpg" alt="" />
+                    <img data-parent-fit="cover" data-sizes="auto" class="lazyload" width="3000" height="2003" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="<?php srcset('footer'); ?>" alt="Close up of a trail runner's shoes" />
                 </div>
                 <div class="grid-area-main inner-grid pos-relative paragraph--copy-over-image">
                     <div class="row-padding t-c-white fade-in copy t-shadow">
@@ -264,9 +263,9 @@
     </div>
 
 
-    <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.6.0/dist/jquery.min.js,npm/slick-carousel@1.8.1,npm/jquery-inview@1.1.2/jquery.inview.min.js,npm/lazysizes@5.3.2/lazysizes.min.js,npm/lazysizes@5.3.2/plugins/respimg/ls.respimg.min.js,npm/lazysizes@5.3.2/plugins/object-fit/ls.object-fit.min.js,npm/lazysizes@5.3.2/plugins/parent-fit/ls.parent-fit.js"></script>
+    <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.6.0/dist/jquery.min.js,npm/slick-carousel@1.8.1,npm/jquery-inview@1.1.2/jquery.inview.min.js,npm/lazysizes@5.3.2/lazysizes.min.js,npm/lazysizes@5.3.2/plugins/respimg/ls.respimg.min.js,npm/lazysizes@5.3.2/plugins/object-fit/ls.object-fit.min.js,npm/lazysizes@5.3.2/plugins/parent-fit/ls.parent-fit.min.js"></script>
     <script src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
-    <script src="dist/all.min.js?v=1.6"></script>
+    <script src="dist/all.min.js?v=1.7"></script>
 
 
 </body>
