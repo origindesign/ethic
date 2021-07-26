@@ -37,8 +37,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://weareethic.org" />
     <meta property="og:title" content="We Are ETHIC" />
-    <meta property="og:description" content="Furthering Equity in Trails, Health, Infrastructure, and Community " />
-    <meta property="og:image" content="" />
+    <meta property="og:description" content="Furthering Equity in Trails, Health, Infrastructure, and Community" />
+    <meta property="og:image" content="/images/1-3000.jpg" />
 
     <meta name="format-detection" content="telephone=no">
 
@@ -61,13 +61,13 @@
             <div class="overflow-hidden cover">
                 <div class="parallax cover carousel">
                     <div class="media cover">
-                        <img data-parent-fit="cover" data-sizes="auto" class="lazyload" width="3000" height="2000" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="<?php srcset('1'); ?>" alt="Two people rolling around a berm on a trail" />
+                        <img data-parent-fit="cover" data-src="/images/1-3000.jpg" data-sizes="auto" class="lazyload" width="3000" height="2000" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="<?php srcset('1'); ?>" alt="Two people rolling around a berm on a trail" />
                     </div>
                     <div class="media cover">
-                        <img data-parent-fit="cover" data-sizes="auto" class="lazyload" width="3000" height="2000" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="<?php srcset('2'); ?>" alt="Groupd of people riding bikes on a street" />
+                        <img data-parent-fit="cover" data-src="/images/2-3000.jpg" data-sizes="auto" class="lazyload" width="3000" height="2000" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="<?php srcset('2'); ?>" alt="Groupd of people riding bikes on a street" />
                     </div>
                     <div class="media cover focus-middle-right">
-                        <img data-parent-fit="cover" data-sizes="auto" class="lazyload" width="3000" height="2000" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="<?php srcset('5'); ?>" alt="Man hiking on a forest trail" />
+                        <img data-parent-fit="cover" data-src="/images/5-3000.jpg" data-sizes="auto" class="lazyload" width="3000" height="2000" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="<?php srcset('5'); ?>" alt="Man hiking on a forest trail" />
                     </div>
                 </div>
             </div>
@@ -107,7 +107,7 @@
                 <div class="row-padding grid-offset-left pseudo-before image">
                     <div class="cover pos-relative">
                         <div class="media portrait focus-middle-left">
-                            <img data-parent-fit="cover" data-sizes="auto" class="lazyload" width="3000" height="2000" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="<?php srcset('first'); ?>" alt="Two men gravel biking" data-aspectratio="1.5" />
+                            <img data-parent-fit="cover" data-src="/images/first-3000.jpg" data-sizes="auto" class="lazyload" width="3000" height="2000" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="<?php srcset('first'); ?>" alt="Two men gravel biking" data-aspectratio="1.5" />
                         </div>
                     </div>
                 </div>
@@ -166,7 +166,7 @@
                 <div class="row-padding grid-offset-right pseudo-before image">
                     <div class="cover pos-relative">
                         <div class="media portrait">
-                            <img data-parent-fit="cover" data-sizes="auto" class="lazyload" width="3000" height="2000" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="<?php srcset('second'); ?>" alt="Small child on a bike chasing bubbles" />
+                            <img data-parent-fit="cover" data-src="/images/second-3000.jpg" data-sizes="auto" class="lazyload" width="3000" height="2000" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="<?php srcset('second'); ?>" alt="Small child on a bike chasing bubbles" />
                         </div>
                     </div>
                 </div>
