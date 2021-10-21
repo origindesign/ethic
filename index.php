@@ -75,11 +75,11 @@
 
                 <strong>
                     <em class="t-large">
-                        BikeNWA &amp; NWA Trailblazers are now
+                    NWA Trailblazers &amp; BikeNWA are now
                     </em>
                 </strong>
                 <h1>
-                    <img src="/images/logo.svg" alt="Ethic" class="logo" />
+                    <img src="/images/logo-trailblazers-white.svg" alt="Ethic plus Trailblazers" class="logo" />
                 </h1>
                 <h4>
                     Equity  <span> // </span>  Trails  <span> // </span>  Health  <span class="hide-phone"> // </span>  Infrastructure  <span> // </span>  Community
@@ -98,10 +98,15 @@
                         Expanded Vision.
                     </h2>
                     <p class="t-large">
-                        The merging of BikeNWA and NWA Trailblazers into <strong>ETHIC</strong> establishes a single organization that upholds the goal of creating a world-class recreational and active transportation infrastructure network, while strengthening our focus on diversity, equity, and inclusion. Through programming and events that increase the diversity of our trails and of those accessing them, ETHIC empowers people to live active, healthy lives in their own community.
+                        We are <strong>Trailblazers &plus; ETHIC</strong>, a 501(c)(3) nonprofit formed in 2021 through the merger of NWA Trailblazers, an organization that has developed 300&plus; miles of multi-use trails, including the OZ Trails network and BikeNWA, a bicycle advocacy and education focused organization that has led the region in advocating for active transportation.
+                    </p>
+                    <p class="t-large">
+                        Our new name is an expression of the core tenets that inform and inspire our work - “Trailblazers”, somebody who's willing to take risks and go on a path that isn't already there. They blaze a trail and leave a path for others creating access and opportunities for everyone &plus; “ETHIC” which furthers Equity in Trails, Health, Infrastructure, and Community.
+                        ETHIC advocates for prioritizing underserved populations' access to trails, cycling, and active transportation infrastructure and encourages their use to create healthier communities.
                     </p>
                     <p class="t-larger">
-                        Together, we can strengthen the foundations of <strong>Equity in Trails, Health, Infrastructure, and Community</strong> to improve the health and well being of our community.
+                        Trailblazers focus on trail development and maintenance.<br>
+                        ETHIC focuses on all things public engagement. <strong>We are stronger together. We are Trailblazers. We are ETHIC.</strong>
                     </p>
                 </div>
                 <div class="row-padding grid-offset-left pseudo-before image">
@@ -117,7 +122,7 @@
                 <div class="grid-area-main inner-grid paragraph--single-column-copy ">
                     <div class="content-container t-largest t-c-white t-align-center fade-in copy">
                         <p>
-                            At <strong>ETHIC</strong>, our work is rooted in the belief that when people move their bodies, they are able to connect to the strength, dignity, and sense of belonging that reside within us all.
+                            At <strong>Trailblazer &plus; ETHIC</strong>, our work is rooted in the belief that when people move their bodies, they are able to connect to the strength, dignity, and sense of belonging that reside within us all.
                         </p>
                     </div>
                 </div>
@@ -182,7 +187,7 @@
                             New site coming
                         </span>
                         <span class="h1 d-block">
-                            September 2021
+                            Winter 2021
                         </span>
                     </div>
                 </div>
@@ -192,7 +197,7 @@
                 <div class="fade-in content-container-offset-right copy">
 
                     <h3>
-                        Join our mailing list to get the latest news on everything <strong>ETHIC</strong>.
+                        Join our mailing list to get the latest news on everything <strong>TRAILBLAZER &plus; ETHIC</strong>.
                     </h3>
 
                     <form id="signup-form" action="/signup.php" method="post" class="d-flex flex-wrap jc-space-between">
@@ -225,7 +230,7 @@
                 <div class="content-container-offset-right copy">
 
                     <div class="d-flex footer-top ai-center jc-space-between">
-                        <img src="/images/logo.svg" alt="Ethic" class="logo" />
+                        <img src="/images/logo-trailblazers-white.svg" alt="Ethic plus Trailblazers" class="logo" />
                         <ul class="reset d-flex m-t-base social">
                             <li>
                                 <a href="mailto:info@bikenwa.org" target="_blank">
@@ -247,7 +252,7 @@
 
                     <p>
                         1000 SE 5th ST. Suite E, Bentonville, AR 72712, United States <br />
-                        ETHIC is a 501(c)(3) nonprofit. All monetary and in-kind donations are tax-deductible. Tax ID is 91-2038915.
+                        Trailblazers &plus; ETHIC is a 501(c)(3) nonprofit. All monetary and in-kind donations are tax-deductible. Tax ID is 91-2038915.
                     </p>
 
                     <p class="copyright">
