@@ -105,8 +105,7 @@
                         ETHIC advocates for prioritizing underserved populations' access to trails, cycling, and active transportation infrastructure and encourages their use to create healthier communities.
                     </p>
                     <p class="t-larger">
-                        Trailblazers focus on trail development and maintenance.<br>
-                        ETHIC focuses on all things public engagement. <strong>We are stronger together. We are Trailblazers. We are ETHIC.</strong>
+                        Trailblazers focus on trail development and maintenance. ETHIC focuses on all things public engagement. <strong>We are stronger together. We are Trailblazers. We are ETHIC.</strong>
                     </p>
                 </div>
                 <div class="row-padding grid-offset-left pseudo-before image">
