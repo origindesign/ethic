@@ -26,8 +26,12 @@
 
 @mixin link-arrow(){
     @include button-text();
-    @include fonticon($icon-arrow, 30px, inherit, 50%, auto, 0, auto, false, true);
+    @include fonticon($icon-arrow, 16px, inherit, 50%, auto, 0, auto, false, true);
     padding-right: 1em; color: $color--primary; outline-color: $color--primary;
+
+    &::before {
+        top: calc(50% - 1px);
+    }
 
     @include hover(){
         color: shade($color--primary, 50%);
