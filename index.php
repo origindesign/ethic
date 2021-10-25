@@ -232,7 +232,7 @@
                         <img src="/images/logo-trailblazers-white.svg" alt="Ethic plus Trailblazers" class="logo" />
                         <ul class="reset d-flex m-t-base social">
                             <li>
-                                <a href="mailto:info@bikenwa.org" target="_blank">
+                                <a href="mailto:info@weareethic.org" target="_blank">
                                     <span class="visually-hidden">Email</span>
                                 </a>
                             </li>
