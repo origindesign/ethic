@@ -121,7 +121,7 @@
                 <div class="grid-area-main inner-grid paragraph--single-column-copy ">
                     <div class="content-container t-largest t-c-white t-align-center fade-in copy">
                         <p>
-                            At <strong>Trailblazer &plus; ETHIC</strong>, our work is rooted in the belief that when people move their bodies, they are able to connect to the strength, dignity, and sense of belonging that reside within us all.
+                            At <strong>Trailblazers &plus; ETHIC</strong>, our work is rooted in the belief that when people move their bodies, they are able to connect to the strength, dignity, and sense of belonging that reside within us all.
                         </p>
                     </div>
                 </div>
@@ -196,7 +196,7 @@
                 <div class="fade-in content-container-offset-right copy">
 
                     <h3>
-                        Join our mailing list to get the latest news on everything <strong>TRAILBLAZER &plus; ETHIC</strong>.
+                        Join our mailing list to get the latest news on everything <strong>TRAILBLAZERS &plus; ETHIC</strong>.
                     </h3>
 
                     <form id="signup-form" action="/signup.php" method="post" class="d-flex flex-wrap jc-space-between">
