@@ -24,7 +24,7 @@
         padding-top: 5em;
     }
     .logo{
-        width: 160px;
+        width: 200px;
         @include breakpoint($bp--tablet-portrait){
             width: 400px;
         }

@@ -4,8 +4,7 @@ $base-typography-spacing: 1.5em;
 $base-line-height: 1.6;
 
 @mixin fontsize($fontsize: $base-font-size){
-    font-size: #{$fontsize}px;
-    font-size: #{$fontsize / 10}rem;
+    font-size: calc(#{$fontsize}/10) + rem;
 }
 
 @mixin body-copy() {

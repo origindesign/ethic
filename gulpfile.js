@@ -1,7 +1,7 @@
 'use strict';
 
 const gulp = require('gulp'); // Main Task Runner
-const sass = require('gulp-sass'); // Sass tool for gulp
+const sass = require('gulp-sass')(require('sass')); // Sass tool for gulp
 const sassGlob = require('gulp-sass-glob'); // Allow to use wildcard in import sass file
 const concat = require('gulp-concat'); // Concatenate files (used for generating one single JS file for instance)
 const uglify = require('gulp-uglify'); // Compile JS
@@ -76,7 +76,7 @@ gulp.task('sass', function() {
     return gulp.src('./scss/**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sassGlob())
-        .pipe(sass())
+        .pipe(sass.sync().on('error', sass.logError))
         .pipe(postcss([ autoprefixer() ]))
         .pipe(gulpIf('*.css', cssnano()))
         .pipe(cleanCSS())

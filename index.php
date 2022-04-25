@@ -26,7 +26,7 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
-    <link rel="stylesheet" media="all" href="/dist/style.css?v=1.7" />
+    <link rel="stylesheet" media="all" href="/dist/style.css?v=1.8" />
 
     <meta name="MobileOptimized" content="width" />
     <meta name="HandheldFriendly" content="true" />
@@ -79,7 +79,7 @@
                     </em>
                 </strong>
                 <h1>
-                    <img src="/images/logo-trailblazers-white.svg" alt="Ethic plus Trailblazers" class="logo" />
+                    <img src="/images/logo-new.svg" alt="Trailblazers" class="logo" />
                 </h1>
                 <h4>
                     Equity  <span> // </span>  Trails  <span> // </span>  Health  <span class="hide-phone"> // </span>  Infrastructure  <span> // </span>  Community
@@ -186,7 +186,7 @@
                             New site coming
                         </span>
                         <span class="h1 d-block">
-                            Winter 2021
+                            Spring 2022
                         </span>
                     </div>
                 </div>
@@ -229,7 +229,7 @@
                 <div class="content-container-offset-right copy">
 
                     <div class="d-flex footer-top ai-center jc-space-between">
-                        <img src="/images/logo-trailblazers-white.svg" alt="Ethic plus Trailblazers" class="logo" />
+                        <img src="/images/logo-new.svg" alt="Trailblazers" class="logo" />
                         <ul class="reset d-flex m-t-base social">
                             <li>
                                 <a href="mailto:info@weareethic.org" target="_blank">

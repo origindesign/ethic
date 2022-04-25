@@ -2,7 +2,7 @@ name: ethic
 recipe: lamp
 services:
   node:
-    type: node:10
+    type: node:14
     globals:
       gulp-cli: latest
       yarn: latest

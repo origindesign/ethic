@@ -23,14 +23,14 @@ form {
         display: block !important;
     }
     @include breakpoint($bp--large){
-        margin: 0 -#{$column-gap/2}; flex-wrap: nowrap !important;
+        margin: 0 -#{$column-gap*0.5}; flex-wrap: nowrap !important;
     }
 
     .form-item {
         margin: $margin-form-item 0;
         @include marginResets();
         @include breakpoint($bp--tablet-portrait){
-            margin: 0; align-self: flex-end; flex-basis: calc(50% - #{$column-gap/2});
+            margin: 0; align-self: flex-end; flex-basis: calc(50% - #{$column-gap*0.5});
             &:nth-child(3),
             &:nth-child(4){
                 margin-top: $margin-form-item;
@@ -43,7 +43,7 @@ form {
             }
         }
         @include breakpoint($bp--large){
-            flex-basis: auto; padding: 0 $column-gap/2 !important; margin: 0 !important; flex-grow: 1;
+            flex-basis: auto; padding: 0 $column-gap*0.5 !important; margin: 0 !important; flex-grow: 1;
         }
     }
 

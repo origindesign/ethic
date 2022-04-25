@@ -9,9 +9,9 @@
     }
 
     .logo{
-        width: 90px;
-        @include breakpoint($bp--large){
-            width: 120px;
+        width: 135px;
+        @include breakpoint($bp--large-layout){
+            width: 200px;
         }
     }
 
